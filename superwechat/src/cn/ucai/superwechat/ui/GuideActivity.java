@@ -19,7 +19,7 @@ public class GuideActivity extends BaseActivity {
     }
 
     @OnClick({R.id.btn_login, R.id.btn_register})
-    
+
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn_login:
