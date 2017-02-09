@@ -444,6 +444,7 @@ public class SuperWeChatDBManager {
 
     /**
      * save a contact
+     *
      * @param user
      */
     synchronized public void saveAppContact(User user){
