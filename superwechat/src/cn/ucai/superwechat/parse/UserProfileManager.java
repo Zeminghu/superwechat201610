@@ -171,7 +171,11 @@ public class UserProfileManager {
                 if (s != null) {
                     Result result = ResultUtils.getResultFromJson(s, User.class);
                     if (result != null && result.isRetMsg()) {
-//save user info to db
+                        User user= (User) result.getRetData();
+//                         save user info to db
+                        setCurrentUserNick(user.getMUserNick());
+//                        setCurrentUserAvatar(value.getAvatar());
+
                     }
                 }
             }
