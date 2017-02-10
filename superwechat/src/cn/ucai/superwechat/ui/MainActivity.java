@@ -15,6 +15,7 @@ package cn.ucai.superwechat.ui;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
+import android.app.AlertDialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -24,13 +25,15 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.PowerManager;
+import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.LocalBroadcastManager;
+import android.support.v4.view.ViewPager;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -44,32 +47,43 @@ import com.hyphenate.chat.EMCmdMessageBody;
 import com.hyphenate.chat.EMConversation;
 import com.hyphenate.chat.EMConversation.EMConversationType;
 import com.hyphenate.chat.EMMessage;
-
-import cn.ucai.superwechat.Constant;
-import cn.ucai.superwechat.SuperWeChatHelper;
-import cn.ucai.superwechat.R;
-import cn.ucai.superwechat.db.InviteMessgeDao;
-import cn.ucai.superwechat.db.UserDao;
-import cn.ucai.superwechat.runtimepermissions.PermissionsManager;
-import cn.ucai.superwechat.runtimepermissions.PermissionsResultAction;
-
-import com.hyphenate.easeui.domain.User;
 import com.hyphenate.easeui.utils.EaseCommonUtils;
 import com.hyphenate.util.EMLog;
 import com.umeng.analytics.MobclickAgent;
 import com.umeng.update.UmengUpdateAgent;
 
 import java.util.List;
-import java.util.Map;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+import cn.ucai.superwechat.Constant;
+import cn.ucai.superwechat.R;
+import cn.ucai.superwechat.SuperWeChatHelper;
+import cn.ucai.superwechat.adapter.MainTabAdpter;
+import cn.ucai.superwechat.db.InviteMessgeDao;
+import cn.ucai.superwechat.db.UserDao;
+import cn.ucai.superwechat.runtimepermissions.PermissionsManager;
+import cn.ucai.superwechat.runtimepermissions.PermissionsResultAction;
+import cn.ucai.superwechat.widget.DMTabHost;
+import cn.ucai.superwechat.widget.MFViewPager;
 
 @SuppressLint("NewApi")
-public class MainActivity extends BaseActivity {
+public class MainActivity extends BaseActivity implements DMTabHost.OnCheckedChangeListener, ViewPager.OnPageChangeListener {
 
     protected static final String TAG = "MainActivity";
+    @BindView(R.id.txt_left)
+    TextView mTxtLeft;
+    @BindView(R.id.img_right)
+    ImageView mImgRight;
+    @BindView(R.id.layout_viewpage)
+    MFViewPager mLayoutViewpage;
+    @BindView(R.id.layout_tabhost)
+    DMTabHost mLayoutTabhost;
     // textview for unread message count
-    private TextView unreadLabel;
+//    private TextView unreadLabel;
     // textview for unread event message
-    private TextView unreadAddressLable;
+//    private TextView unreadAddressLable;
 
     private Button[] mTabs;
     private ContactListFragment contactListFragment;
@@ -81,6 +95,7 @@ public class MainActivity extends BaseActivity {
     // user account was removed
     private boolean isCurrentAccountRemoved = false;
 
+    MainTabAdpter adapter;
 
     /**
      * check if current user account was remove
@@ -97,6 +112,7 @@ public class MainActivity extends BaseActivity {
 
 
         setContentView(R.layout.em_activity_main);
+        ButterKnife.bind(this);
         // runtime permission for android 6.0, just require all permissions here for simple
         requestPermissions();
 
@@ -130,6 +146,15 @@ public class MainActivity extends BaseActivity {
 //        getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, conversationListFragment)
 //                .add(R.id.fragment_container, contactListFragment).hide(contactListFragment).show(conversationListFragment)
 //                .commit();
+        adapter = new MainTabAdpter(getSupportFragmentManager());
+        adapter.addFragment(conversationListFragment, "微信");
+        adapter.addFragment(contactListFragment, "通讯录");
+        adapter.addFragment(new DiscoverFragment(), "发现");
+        adapter.addFragment(settingFragment, "我");
+        mLayoutViewpage.setAdapter(adapter);
+        mLayoutTabhost.setChecked(0);
+        mLayoutTabhost.setOnCheckedChangeListener(this);
+        mLayoutViewpage.setOnPageChangeListener(this);
     }
 
     private void initUment() {
@@ -159,7 +184,7 @@ public class MainActivity extends BaseActivity {
             PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
             if (!pm.isIgnoringBatteryOptimizations(packageName)) {
                 Intent intent = new Intent();
-                intent.setAction(android.provider.Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS);
+                intent.setAction(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS);
                 intent.setData(Uri.parse("package:" + packageName));
                 startActivity(intent);
             }
@@ -193,6 +218,8 @@ public class MainActivity extends BaseActivity {
 //        mTabs[2] = (Button) findViewById(R.id.btn_setting);
 //        // select first tab
 //        mTabs[0].setSelected(true);
+        mTxtLeft.setVisibility(View.VISIBLE);
+        mImgRight.setVisibility(View.VISIBLE);
     }
 
     /**
@@ -324,6 +351,32 @@ public class MainActivity extends BaseActivity {
         broadcastManager.registerReceiver(broadcastReceiver, intentFilter);
     }
 
+    @OnClick(R.id.img_right)
+    public void onClick() {
+    }
+
+    @Override
+    public void onPageScrolled(int i, float v, int i1) {
+
+    }
+
+    @Override
+    public void onPageSelected(int i) {
+//        mLayoutViewpage.setCurrentItem(i);
+        mLayoutTabhost.setChecked(i);
+    }
+
+    @Override
+    public void onPageScrollStateChanged(int i) {
+
+    }
+
+    @Override
+    public void onCheckedChange(int checkedPosition, boolean byUser) {
+        mLayoutViewpage.setCurrentItem(checkedPosition,false);
+
+    }
+
     public class MyContactListener implements EMContactListener {
         @Override
         public void onContactAdded(String username) {
@@ -384,28 +437,28 @@ public class MainActivity extends BaseActivity {
      */
     public void updateUnreadLabel() {
         int count = getUnreadMsgCountTotal();
-        if (count > 0) {
-            unreadLabel.setText(String.valueOf(count));
-            unreadLabel.setVisibility(View.VISIBLE);
-        } else {
-            unreadLabel.setVisibility(View.INVISIBLE);
-        }
+//        if (count > 0) {
+//            unreadLabel.setText(String.valueOf(count));
+//            unreadLabel.setVisibility(View.VISIBLE);
+//        } else {
+//            unreadLabel.setVisibility(View.INVISIBLE);
+//        }
     }
 
     /**
      * update the total unread count
      */
     public void updateUnreadAddressLable() {
-        runOnUiThread(new Runnable() {
-            public void run() {
-                int count = getUnreadAddressCountTotal();
-                if (count > 0) {
-                    unreadAddressLable.setVisibility(View.VISIBLE);
-                } else {
-                    unreadAddressLable.setVisibility(View.INVISIBLE);
-                }
-            }
-        });
+//        runOnUiThread(new Runnable() {
+//            public void run() {
+//                int count = getUnreadAddressCountTotal();
+//                if (count > 0) {
+//                    unreadAddressLable.setVisibility(View.VISIBLE);
+//                } else {
+//                    unreadAddressLable.setVisibility(View.INVISIBLE);
+//                }
+//            }
+//        });
 
     }
 
@@ -480,7 +533,7 @@ public class MainActivity extends BaseActivity {
         return super.onKeyDown(keyCode, event);
     }
 
-    private android.app.AlertDialog.Builder exceptionBuilder;
+    private AlertDialog.Builder exceptionBuilder;
     private boolean isExceptionDialogShow = false;
     private BroadcastReceiver internalDebugReceiver;
     private ConversationListFragment conversationListFragment;
@@ -509,7 +562,7 @@ public class MainActivity extends BaseActivity {
             // clear up global variables
             try {
                 if (exceptionBuilder == null)
-                    exceptionBuilder = new android.app.AlertDialog.Builder(MainActivity.this);
+                    exceptionBuilder = new AlertDialog.Builder(MainActivity.this);
                 exceptionBuilder.setTitle(st);
                 exceptionBuilder.setMessage(getExceptionMessageId(exceptionType));
                 exceptionBuilder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
