@@ -28,7 +28,7 @@
                     android:layout_height="30dip"
                     android:gravity="bottom|left"
                     android:paddingLeft="10dip"
-                    android:text="@string/notify"
+                    android:text="New message notification"
                     android:textColor="@color/btn_gray_pressed" />
 
                 <TextView
@@ -535,5 +535,7 @@
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
+
+    <include layout="@layout/view_layout_title"/>
 
 </LinearLayout>

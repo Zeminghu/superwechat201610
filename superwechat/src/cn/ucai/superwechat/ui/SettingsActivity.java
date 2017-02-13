@@ -47,6 +47,8 @@ import cn.ucai.superwechat.utils.PreferenceManager;
 
 /**
  * settings screen
+ *
+ *
  */
 @SuppressWarnings({"FieldCanBeLocal"})
 public class SettingsActivity extends BaseActivity implements OnClickListener {
@@ -281,6 +283,9 @@ public class SettingsActivity extends BaseActivity implements OnClickListener {
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+//            case R.id.img_back:
+//                MFGT.finish(this);
+//                break;
             case R.id.rl_switch_notification:
                 if (notifySwitch.isSwitchOpen()) {
                     notifySwitch.closeSwitch();
@@ -437,6 +442,7 @@ public class SettingsActivity extends BaseActivity implements OnClickListener {
                         // show login screen
                         finish();
                         MFGT.gotoLoginCleanTask(SettingsActivity.this);
+
                     }
                 });
             }
@@ -461,8 +467,8 @@ public class SettingsActivity extends BaseActivity implements OnClickListener {
         });
     }
 
-    @OnClick(R.id.img_back)
-    public void onClick() {
-        MFGT.finish(this);
-    }
+@OnClick(R.id.img_back)
+    public void onClick(){
+    MFGT.finish(this);
+}
 }

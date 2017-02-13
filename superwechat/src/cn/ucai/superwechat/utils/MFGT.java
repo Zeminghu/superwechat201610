@@ -2,11 +2,8 @@ package cn.ucai.superwechat.utils;
 
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
-
-import java.util.ArrayList;
 
 import cn.ucai.superwechat.R;
 import cn.ucai.superwechat.ui.GuideActivity;
@@ -37,15 +34,17 @@ public class MFGT {
         context.overridePendingTransition(R.anim.push_right_in, R.anim.push_right_out);
     }
 
-    public static void gotoLogin(Activity activity){
-        startActivity(activity,LoginActivity.class);
+    public static void gotoLogin(Activity activity) {
+        startActivity(activity, LoginActivity.class);
     }
-    public static void gotoLoginCleanTask(Activity activity){
-        startActivity(activity, new Intent(activity,LoginActivity.class)
+
+    public static void gotoLoginCleanTask(Activity activity) {
+        startActivity(activity, new Intent(activity, LoginActivity.class)
                 .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK));
     }
-    public static void gotoRegister(Activity activity){
-        startActivity(activity,RegisterActivity.class);
+
+    public static void gotoRegister(Activity activity) {
+        startActivity(activity, RegisterActivity.class);
     }
 
     public static void gotoGuide(SplashActivity activity) {
