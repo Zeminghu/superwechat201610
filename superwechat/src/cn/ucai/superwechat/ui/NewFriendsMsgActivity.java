@@ -32,7 +32,6 @@ import cn.ucai.superwechat.utils.MFGT;
 
 /**
  * Application and notification
- *
  */
 public class NewFriendsMsgActivity extends BaseActivity {
 
@@ -56,13 +55,13 @@ public class NewFriendsMsgActivity extends BaseActivity {
         NewFriendsMsgAdapter adapter = new NewFriendsMsgAdapter(this, 1, msgs);
         listView.setAdapter(adapter);
         dao.saveUnreadMessageCount(0);
-initView();
+        initView();
     }
 
     private void initView() {
         mImgBack.setVisibility(View.VISIBLE);
         mTxtTitle.setVisibility(View.VISIBLE);
-        mTxtTitle.setText(R.string.Application_and_notify);
+        mTxtTitle.setText(R.string.recommended_friends);
         mTxtRight.setVisibility(View.VISIBLE);
     }
 
