@@ -76,6 +76,6 @@ public class MFGT {
 
     public static void gotoAddFirent(Activity activity, String userName) {
         startActivity(activity,new Intent(activity, AddFirentActivity.class)
-        .putExtra(I.User.USER_NAME,userName));
+                .putExtra(I.User.USER_NAME,userName));
     }
 }

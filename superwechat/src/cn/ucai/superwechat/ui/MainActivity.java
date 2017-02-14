@@ -85,10 +85,10 @@ public class MainActivity extends BaseActivity implements DMTabHost.OnCheckedCha
     MFViewPager mLayoutViewpage;
     @BindView(R.id.layout_tabhost)
     DMTabHost mLayoutTabhost;
-    // textview for unread message count
-//    private TextView unreadLabel;
-    // textview for unread event message
-//    private TextView unreadAddressLable;
+//      textview for unread message count
+//      private TextView unreadLabel;
+//      textview for unread event message
+//      private TextView ;
 
     private Button[] mTabs;
     private ContactListFragment contactListFragment;
@@ -146,7 +146,7 @@ public class MainActivity extends BaseActivity implements DMTabHost.OnCheckedCha
     private void initFragment() {
         conversationListFragment = new ConversationListFragment();
         contactListFragment = new ContactListFragment();
-       ProfileFragment profileFragment=new ProfileFragment();
+        ProfileFragment profileFragment = new ProfileFragment();
 
         adapter = new MainTabAdpter(getSupportFragmentManager());
         adapter.addFragment(conversationListFragment, "微信");
@@ -213,7 +213,7 @@ public class MainActivity extends BaseActivity implements DMTabHost.OnCheckedCha
      */
     private void initView() {
 //        unreadLabel = (TextView) findViewById(R.id.unread_msg_number);
-//        unreadAddressLable = (TextView) findViewById(R.id.unread_address_number);
+//         = (TextView) findViewById(R.id.unread_address_number);
 //        mTabs = new Button[3];
 //        mTabs[0] = (Button) findViewById(R.id.btn_conversation);
 //        mTabs[1] = (Button) findViewById(R.id.btn_address_list);
@@ -222,20 +222,20 @@ public class MainActivity extends BaseActivity implements DMTabHost.OnCheckedCha
 //        mTabs[0].setSelected(true);
         mTxtLeft.setVisibility(View.VISIBLE);
         mImgRight.setVisibility(View.VISIBLE);
-        mTitlePopup=new TitlePopup(this, ViewGroup.LayoutParams.WRAP_CONTENT,
+        mTitlePopup = new TitlePopup(this, ViewGroup.LayoutParams.WRAP_CONTENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT);
-        mTitlePopup.addAction(new ActionItem(this,R.string.menu_groupchat,R.drawable.icon_menu_group));
-        mTitlePopup.addAction(new ActionItem(this,R.string.menu_addfriend,R.drawable.icon_menu_addfriend));
-        mTitlePopup.addAction(new ActionItem(this,R.string.menu_qrcode,R.drawable.icon_menu_sao));
-        mTitlePopup.addAction(new ActionItem(this,R.string.menu_money,R.drawable.icon_menu_money));
+        mTitlePopup.addAction(new ActionItem(this, R.string.menu_groupchat, R.drawable.icon_menu_group));
+        mTitlePopup.addAction(new ActionItem(this, R.string.menu_addfriend, R.drawable.icon_menu_addfriend));
+        mTitlePopup.addAction(new ActionItem(this, R.string.menu_qrcode, R.drawable.icon_menu_sao));
+        mTitlePopup.addAction(new ActionItem(this, R.string.menu_money, R.drawable.icon_menu_money));
         mTitlePopup.setItemOnClickListener(listener);
     }
 
-    TitlePopup.OnItemOnClickListener listener=new TitlePopup.OnItemOnClickListener() {
+    TitlePopup.OnItemOnClickListener listener = new TitlePopup.OnItemOnClickListener() {
         @Override
         public void onItemClick(ActionItem item, int position) {
-L.e(TAG,"item="+item+",position="+position);
-            switch (position){
+            L.e(TAG, "item=" + item + ",position=" + position);
+            switch (position) {
                 case 1:
                     MFGT.gotoAddContact(MainActivity.this);
                     break;
@@ -395,7 +395,7 @@ L.e(TAG,"item="+item+",position="+position);
 
     @Override
     public void onCheckedChange(int checkedPosition, boolean byUser) {
-        mLayoutViewpage.setCurrentItem(checkedPosition,false);
+        mLayoutViewpage.setCurrentItem(checkedPosition, false);
 
     }
 
@@ -471,16 +471,19 @@ L.e(TAG,"item="+item+",position="+position);
      * update the total unread count
      */
     public void updateUnreadAddressLable() {
-//        runOnUiThread(new Runnable() {
-//            public void run() {
-//                int count = getUnreadAddressCountTotal();
-//                if (count > 0) {
-//                    unreadAddressLable.setVisibility(View.VISIBLE);
-//                } else {
-//                    unreadAddressLable.setVisibility(View.INVISIBLE);
-//                }
-//            }
-//        });
+        runOnUiThread(new Runnable() {
+            public void run() {
+                int count = getUnreadAddressCountTotal();
+                L.e(TAG,"updateUnreadAddressLable,count="+count);
+                if (count > 1) {
+                    mLayoutTabhost.setUnreadCount(1, count);
+                }else if (count==1){
+                    mLayoutTabhost.setHasNew(1,true);
+                } else {
+                    mLayoutTabhost.setHasNew(1,false);
+                }
+            }
+        });
 
     }
 
