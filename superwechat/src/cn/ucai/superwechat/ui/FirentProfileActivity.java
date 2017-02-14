@@ -10,7 +10,6 @@ import android.widget.TextView;
 import com.hyphenate.easeui.domain.User;
 import com.hyphenate.easeui.utils.EaseUserUtils;
 
-import java.io.Serializable;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -20,8 +19,8 @@ import cn.ucai.superwechat.R;
 import cn.ucai.superwechat.SuperWeChatHelper;
 import cn.ucai.superwechat.utils.MFGT;
 
-public class FirentProfileActivity extends Activity {
-
+public class FirentProfileActivity extends BaseActivity {
+    private static final String TAG = "FirentProfileActivity.class.getSimpleName()";
     @BindView(R.id.img_back)
     ImageView mImgBack;
     @BindView(R.id.txt_title)
@@ -51,7 +50,7 @@ public class FirentProfileActivity extends Activity {
     private void initData() {
         mImgBack.setVisibility(View.VISIBLE);
         mTxtTitle.setVisibility(View.VISIBLE);
-        mTxtTitle.setText(R.string.userinfo_txt_title);
+        mTxtTitle.setText(R.string.userinfo_txt_profile);//调用详细信息
 //       User user=getIntent().getSerializableExtra(I.User.USER_NAME);强转cast to
        user = (User) getIntent().getSerializableExtra(I.User.USER_NAME);
 //        L.e(TAG,"user="+user);
@@ -85,7 +84,12 @@ public class FirentProfileActivity extends Activity {
     }
 
     @OnClick(R.id.img_back)
-    public void onClick() {
+    public void imgBack() {
         MFGT.finish(this);
+    }
+
+    @OnClick(R.id.btn_add_contact)
+    public void sendAddContactMsg(){
+        MFGT.gotoAddFirent(this,user.getMUserName());
     }
 }
