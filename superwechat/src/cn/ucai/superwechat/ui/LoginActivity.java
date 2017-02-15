@@ -160,7 +160,6 @@ public class LoginActivity extends BaseActivity {
     }
 
 
-
     private void loginEMServer() {
         // call login method
         Log.d(TAG, "EMClient.getInstance().login");
