@@ -38,7 +38,6 @@ public class ChatActivity extends BaseActivity{
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        L.e("chat","onDestroy");
         activityInstance = null;
     }
     
@@ -57,7 +56,6 @@ public class ChatActivity extends BaseActivity{
     
     @Override
     public void onBackPressed() {
-        L.e("chat","onBackPressed");
 //        chatFragment.onBackPressed();
         MFGT.gotoMain(this);
 //        if (EasyUtils.isSingleActivity(this)) {

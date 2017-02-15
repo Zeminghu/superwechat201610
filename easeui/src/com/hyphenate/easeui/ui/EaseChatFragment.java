@@ -452,7 +452,6 @@ public class EaseChatFragment extends EaseBaseFragment implements EMMessageListe
     }
 
     public void onBackPressed() {
-        Log.e(TAG,"onBackPressed..."+inputMenu.onBackPressed());
         if (inputMenu.onBackPressed()) {
             if(chatType == EaseConstant.CHATTYPE_GROUP){
                 EaseAtMessageHelper.get().removeAtMeGroup(toChatUsername);
