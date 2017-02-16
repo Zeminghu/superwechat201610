@@ -82,7 +82,7 @@ public class SuperWeChatHelper {
         void onSyncComplete(boolean success);
     }
 
-    protected static final String TAG = "SuperWeChatHelper";
+    protected static final String TAG = "DemoHelper";
 
     private EaseUI easeUI;
 
@@ -152,7 +152,8 @@ public class SuperWeChatHelper {
     /**
      * init helper
      *
-     * @param context application context
+     * @param context
+     *            application context
      */
     public void init(Context context) {
         demoModel = new SuperWeChatModel(context);
@@ -279,7 +280,7 @@ public class SuperWeChatHelper {
             }
         });
 
-        //set options 
+        //set options
         easeUI.setSettingsProvider(new EaseSettingsProvider() {
 
             @Override
@@ -733,7 +734,8 @@ public class SuperWeChatHelper {
         }
 
         @Override
-        public void onFriendRequestAccepted(String username) {
+        public void onFriendRequestAccepted(final String username) {
+            L.e(TAG,"onFriendRequestAccepted...username="+username);
             List<InviteMessage> msgs = inviteMessgeDao.getMessagesList();
             for (InviteMessage inviteMessage : msgs) {
                 if (inviteMessage.getFrom().equals(username)) {
@@ -832,10 +834,6 @@ public class SuperWeChatHelper {
         User user = null;
         user = getAppContactList().get(username);
 
-        //if(user == null && getRobotList() != null){
-        user = getAppContactList().get(username);
-
-
         // if user is not in your contacts, set inital letter for him/her
         if (user == null) {
             user = new User(username);
@@ -920,8 +918,10 @@ public class SuperWeChatHelper {
     /**
      * logout
      *
-     * @param unbindDeviceToken whether you need unbind your device token
-     * @param callback          callback
+     * @param unbindDeviceToken
+     *            whether you need unbind your device token
+     * @param callback
+     *            callback
      */
     public void logout(boolean unbindDeviceToken, final EMCallBack callback) {
         endCall();
@@ -1190,6 +1190,40 @@ public class SuperWeChatHelper {
 
         isSyncingContactsWithServer = true;
 
+        if(isLoggedIn()){
+            NetDao.loadContact(appContext, EMClient.getInstance().getCurrentUser(),
+                    new OnCompleteListener<String>() {
+                        @Override
+                        public void onSuccess(String s) {
+                            if (s != null) {
+                                Result result = ResultUtils.getListResultFromJson(s, User.class);
+                                if (result!=null && result.isRetMsg()){
+                                    List<User> list= (List<User>) result.getRetData();
+                                    if (list!=null && list.size()>0){
+                                        Map<String, User> userMap = new HashMap<String, User>();
+                                        for (User u : list) {
+                                            EaseCommonUtils.setAppUserInitialLetter(u);
+                                            userMap.put(u.getMUserName(), u);
+                                        }
+                                        // save the contact list to cache,保存到内存
+                                        getAppContactList().clear();
+                                        getAppContactList().putAll(userMap);
+                                        // save the contact list to database,保存到数据库
+                                        UserDao dao = new UserDao(appContext);
+                                        dao.saveAppContactList(list);
+                                        broadcastManager.sendBroadcast(new Intent(Constant.ACTION_CONTACT_CHANAGED));
+                                    }
+                                }
+                            }
+                        }
+
+                        @Override
+                        public void onError(String error) {
+
+                        }
+                    });
+        }
+
         new Thread() {
             @Override
             public void run() {
@@ -1204,39 +1238,19 @@ public class SuperWeChatHelper {
                         return;
                     }
 
-                    NetDao.loadContact(appContext, EMClient.getInstance().getCurrentUser(),
-                            new OnCompleteListener<String>() {
-                                @Override
-                                public void onSuccess(String s) {
-                                    if (s != null) {
-                                        Result result = ResultUtils.getListResultFromJson(s, User.class);
-                                        if (result!=null && result.isRetMsg()){
-                                            List<User> list= (List<User>) result.getRetData();
-                                            if (list!=null && list.size()>0){
-                                                Map<String, User> userMap = new HashMap<String, User>();
-                                                for (User u : list) {
-                                                    EaseCommonUtils.setAppUserInitialLetter(u);
-                                                    userMap.put(username, u);
-                                                }
-                                                // save the contact list to cache
-                                                getAppContactList().clear();
-                                                getAppContactList().putAll(userMap);
-                                                // save the contact list to database
-                                                UserDao dao = new UserDao(appContext);
-                                                dao.saveAppContactList(list);
-                                                broadcastManager.sendBroadcast(new Intent(Constant.ACTION_CONTACT_CHANAGED));
-                                            }
-                                        }
-                                    }
-                                }
-
-                                @Override
-                                public void onError(String error) {
-
-                                }
-                            });
-
-
+                    Map<String, EaseUser> userlist = new HashMap<String, EaseUser>();
+                    for (String username : usernames) {
+                        EaseUser user = new EaseUser(username);
+                        EaseCommonUtils.setUserInitialLetter(user);
+                        userlist.put(username, user);
+                    }
+                    // save the contact list to cache
+                    getContactList().clear();
+                    getContactList().putAll(userlist);
+                    // save the contact list to database
+                    UserDao dao = new UserDao(appContext);
+                    List<EaseUser> users = new ArrayList<EaseUser>(userlist.values());
+                    dao.saveContactList(users);
 
                     demoModel.setContactSynced(true);
                     EMLog.d(TAG, "set contact syn status to true");
@@ -1425,7 +1439,7 @@ public class SuperWeChatHelper {
         }
 
         // return a empty non-null object to avoid app crash
-        if (contactList == null) {
+        if(appContactList == null){
             return new Hashtable<String, User>();
         }
 
