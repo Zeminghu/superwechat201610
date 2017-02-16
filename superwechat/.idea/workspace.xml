@@ -13,7 +13,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="101f3474-5b73-49b4-a65e-361569b2ef30" name="Default" comment="退出登录,清空内存中的数据">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/ucai/superwechat/ui/ContactListFragment.java" afterPath="$PROJECT_DIR$/src/cn/ucai/superwechat/ui/ContactListFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cn/ucai/superwechat/ui/MainActivity.java" afterPath="$PROJECT_DIR$/src/cn/ucai/superwechat/ui/MainActivity.java" />
     </list>
     <list id="68100ad0-2de2-419d-8d56-3e1e81b9eb3d" name="Failed commit: Default" comment="退出登录,清空内存中的数据" />
@@ -61,7 +61,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ContactListFragment.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ContactListFragment.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cn/ucai/superwechat/ui/ContactListFragment.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="237">
@@ -78,11 +78,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/cn/ucai/superwechat/ui/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="82">
-              <caret line="327" column="11" selection-start-line="327" selection-start-column="11" selection-end-line="327" selection-end-column="11" />
+            <state relative-caret-position="136">
+              <caret line="462" column="46" selection-start-line="462" selection-start-column="46" selection-end-line="462" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -2593,14 +2593,14 @@
         <option value="$PROJECT_DIR$/res/menu/em_context_contact_list.xml" />
         <option value="$PROJECT_DIR$/src/cn/ucai/superwechat/ui/ConversationListFragment.java" />
         <option value="$PROJECT_DIR$/src/cn/ucai/superwechat/net/NetDao.java" />
-        <option value="$PROJECT_DIR$/src/cn/ucai/superwechat/ui/MainActivity.java" />
         <option value="$PROJECT_DIR$/src/cn/ucai/superwechat/ui/ContactListFragment.java" />
+        <option value="$PROJECT_DIR$/src/cn/ucai/superwechat/ui/MainActivity.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="465" />
-    <option name="y" value="36" />
+    <option name="x" value="541" />
+    <option name="y" value="25" />
     <option name="width" value="1182" />
     <option name="height" value="699" />
   </component>
@@ -3020,7 +3020,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="465" y="36" width="1182" height="699" extended-state="0" />
+    <frame x="541" y="25" width="1182" height="699" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -3173,6 +3173,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="903">
           <caret line="90" column="4" selection-start-line="90" selection-start-column="4" selection-end-line="90" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -3523,14 +3524,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cn/ucai/superwechat/ui/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="327" column="11" selection-start-line="327" selection-start-column="11" selection-end-line="327" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/ucai/superwechat/SuperWeChatHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -3558,6 +3551,14 @@
             <element signature="e#5264#5460#0" expanded="true" />
             <element signature="e#5459#5460#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cn/ucai/superwechat/ui/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="462" column="46" selection-start-line="462" selection-start-column="46" selection-end-line="462" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>
