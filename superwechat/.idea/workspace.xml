@@ -13,7 +13,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="101f3474-5b73-49b4-a65e-361569b2ef30" name="Default" comment="退出登录,清空内存中的数据">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../easeui/EaseUI.iml" afterPath="$PROJECT_DIR$/../easeui/EaseUI.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="68100ad0-2de2-419d-8d56-3e1e81b9eb3d" name="Failed commit: Default" comment="退出登录,清空内存中的数据" />
@@ -63,11 +62,73 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SuperWeChatHelper.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SuperWeChatHelper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cn/ucai/superwechat/SuperWeChatHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+            <state relative-caret-position="17">
+              <caret line="1449" column="30" selection-start-line="1449" selection-start-column="30" selection-end-line="1449" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#10188#10189#0" expanded="true" />
+                <element signature="e#10248#10249#0" expanded="true" />
+                <element signature="e#10325#10326#0" expanded="true" />
+                <element signature="e#10388#10389#0" expanded="true" />
+                <element signature="e#10557#10558#0" expanded="true" />
+                <element signature="e#10628#10629#0" expanded="true" />
+                <element signature="e#12747#12748#0" expanded="true" />
+                <element signature="e#12790#12791#0" expanded="true" />
+                <element signature="e#13920#13967#0" expanded="true" />
+                <element signature="e#14205#14252#0" expanded="true" />
+                <element signature="e#24081#24149#0" expanded="true" />
+                <element signature="e#25242#25304#0" expanded="true" />
+                <element signature="e#26455#26473#0" expanded="true" />
+                <element signature="e#32257#32258#0" expanded="true" />
+                <element signature="e#32329#32330#0" expanded="true" />
+                <element signature="e#37086#37087#0" expanded="true" />
+                <element signature="e#37150#37151#0" expanded="true" />
+                <element signature="e#38429#38430#0" expanded="true" />
+                <element signature="e#38472#38473#0" expanded="true" />
+                <element signature="e#38513#38514#0" expanded="true" />
+                <element signature="e#38564#38565#0" expanded="true" />
+                <element signature="e#40003#40004#0" expanded="true" />
+                <element signature="e#40045#40046#0" expanded="true" />
+                <element signature="e#40561#40571#0" expanded="true" />
+                <element signature="e#42904#44279#0" expanded="true" />
+                <element signature="e#44278#44279#0" expanded="true" />
+                <element signature="e#45474#45488#0" expanded="true" />
+                <element signature="e#46619#49495#0" expanded="true" />
+                <element signature="e#47296#47314#0" expanded="true" />
+                <element signature="e#47909#47919#0" expanded="true" />
+                <element signature="e#49494#49495#0" expanded="true" />
+                <element signature="e#49923#51293#0" expanded="true" />
+                <element signature="e#51292#51293#0" expanded="true" />
+                <element signature="e#51549#51550#0" expanded="true" />
+                <element signature="e#51597#51598#0" expanded="true" />
+                <element signature="e#51649#51650#0" expanded="true" />
+                <element signature="e#51699#51700#0" expanded="true" />
+                <element signature="e#51752#51753#0" expanded="true" />
+                <element signature="e#51803#51804#0" expanded="true" />
+                <element signature="e#51852#51853#0" expanded="true" />
+                <element signature="e#51899#51900#0" expanded="true" />
+                <element signature="e#51950#51951#0" expanded="true" />
+                <element signature="e#51999#52000#0" expanded="true" />
+                <element signature="e#52051#52052#0" expanded="true" />
+                <element signature="e#52101#52102#0" expanded="true" />
+                <element signature="e#52826#52827#0" expanded="true" />
+                <element signature="e#52871#52872#0" expanded="true" />
+                <element signature="e#52921#52922#0" expanded="true" />
+                <element signature="e#52965#52966#0" expanded="true" />
+                <element signature="e#54291#54297#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EaseConversationAdapter.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../easeui/src/com/hyphenate/easeui/adapter/EaseConversationAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5400">
+              <caret line="249" column="10" selection-start-line="249" selection-start-column="10" selection-end-line="249" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -2593,14 +2654,14 @@
         <option value="$PROJECT_DIR$/src/cn/ucai/superwechat/ui/UserProfileActivity.java" />
         <option value="$PROJECT_DIR$/src/cn/ucai/superwechat/net/NetDao.java" />
         <option value="$PROJECT_DIR$/src/cn/ucai/superwechat/domain/InviteMessage.java" />
-        <option value="$PROJECT_DIR$/src/cn/ucai/superwechat/SuperWeChatHelper.java" />
         <option value="$PROJECT_DIR$/src/cn/ucai/superwechat/ui/NewGroupActivity.java" />
+        <option value="$PROJECT_DIR$/src/cn/ucai/superwechat/SuperWeChatHelper.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="88" />
-    <option name="y" value="55" />
+    <option name="x" value="116" />
+    <option name="y" value="16" />
     <option name="width" value="1182" />
     <option name="height" value="721" />
   </component>
@@ -2643,7 +2704,7 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="superwechat" />
+              <option name="myItemId" value="EaseUI" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2653,7 +2714,7 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="superwechat" />
+              <option name="myItemId" value="EaseUI" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -2661,13 +2722,44 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="superwechat" />
+              <option name="myItemId" value="easeui" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superwechat" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EaseUI" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="easeui" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="adapter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="superwechat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -2682,7 +2774,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="superwechat" />
+              <option name="myItemId" value="easeui" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2697,7 +2789,7 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="device.picker.selection" value="185213b7" />
-    <property name="SearchEverywhereHistoryKey" value="inviteMe&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/superwechat/src/cn/ucai/superwechat/domain/InviteMessage.java&#10;super&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/superwechat/src/cn/ucai/superwechat/SuperWeChatHelper.java&#10;netdao&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/superwechat/src/cn/ucai/superwechat/net/NetDao.java&#10;I&#9;PSI&#9;JAVA://cn.ucai.superwechat.I&#10;userpro&#9;PSI&#9;JAVA://cn.ucai.superwechat.ui.UserProfileActivity&#10;newGroup&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/superwechat/src/cn/ucai/superwechat/ui/NewGroupActivity.java&#10;net&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/superwechat/src/cn/ucai/superwechat/net/NetDao.java&#10;em_activity_new_g&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/superwechat/res/layout/em_activity_new_group.xml&#10;newgroupA&#9;PSI&#9;JAVA://cn.ucai.superwechat.ui.NewGroupActivity&#10;contact&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/superwechat/src/cn/ucai/superwechat/ui/ContactListFragment.java&#10;easeconver&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/easeui/src/com/hyphenate/easeui/adapter/EaseConversationAdapter.java&#10;chatf&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/superwechat/src/cn/ucai/superwechat/ui/ChatFragment.java&#10;user&#9;PSI&#9;JAVA://com.hyphenate.easeui.domain.User&#10;easeuser&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/easeui/src/com/hyphenate/easeui/utils/EaseUserUtils.java&#10;easechatr&#9;PSI&#9;JAVA://com.hyphenate.easeui.widget.chatrow.EaseChatRow&#10;easeChat&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/easeui/src/com/hyphenate/easeui/ui/EaseChatFragment.java&#10;firentpr&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/superwechat/src/cn/ucai/superwechat/ui/FirentProfileActivity.java&#10;firentP&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/superwechat/src/cn/ucai/superwechat/ui/FirentProfileActivity.java&#10;easeConver&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/easeui/src/com/hyphenate/easeui/adapter/EaseConversationAdapter.java&#10;main&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/superwechat/src/cn/ucai/superwechat/ui/MainActivity.java&#10;netd&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/superwechat/src/cn/ucai/superwechat/net/NetDao.java&#10;conversation&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/superwechat/src/cn/ucai/superwechat/ui/ConversationListFragment.java&#10;add_to_blacklist&#9;PSI&#9;JAVA://cn.ucai.superwechat.R.id#add_to_blacklist&#10;contactLis&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/superwechat/src/cn/ucai/superwechat/ui/ContactListFragment.java&#10;superwechat&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/superwechat/src/cn/ucai/superwechat/SuperWeChatHelper.java&#10;Net&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/superwechat/src/cn/ucai/superwechat/net/NetDao.java&#10;login&#9;PSI&#9;JAVA://cn.ucai.superwechat.ui.LoginActivity&#10;conversationList&#9;PSI&#9;JAVA://cn.ucai.superwechat.ui.ConversationListFragment&#10;mfgt&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/superwechat/src/cn/ucai/superwechat/utils/MFGT.java&#10;easechatf&#9;PSI&#9;JAVA://com.hyphenate.easeui.ui.EaseChatFragment&#10;chatAc&#9;PSI&#9;JAVA://cn.ucai.superwechat.ui.ChatActivity&#10;ease_widget_ti&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/easeui/res/layout/ease_widget_title_bar.xml&#10;em_activity_cha&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/superwechat/res/layout/em_activity_chat.xml&#10;easeconta&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/easeui/src/com/hyphenate/easeui/adapter/EaseContactAdapter.java&#10;ease&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/easeui/src/com/hyphenate/easeui/ui/EaseContactListFragment.java&#10;contactlis&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/superwechat/src/cn/ucai/superwechat/ui/ContactListFragment.java&#10;cont&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/easeui/src/com/hyphenate/easeui/ui/EaseContactListFragment.java&#10;pickusera&#9;PSI&#9;JAVA://cn.ucai.superwechat.ui.PickAtUserActivity&#10;grouppick&#9;PSI&#9;JAVA://cn.ucai.superwechat.ui.GroupPickContactsActivity&#10;fo&#9;PSI&#9;JAVA://cn.ucai.superwechat.ui.ForwardMessageActivity&#10;pickcontact&#9;PSI&#9;JAVA://cn.ucai.superwechat.ui.PickContactNoCheckboxActivity&#10;contactlistf&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/superwechat/src/cn/ucai/superwechat/ui/ContactListFragment.java&#10;easecontactlis&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/easeui/src/com/hyphenate/easeui/ui/EaseContactListFragment.java&#10;Easecon&#9;PSI&#9;JAVA://com.hyphenate.easeui.widget.EaseContactList&#10;em_con&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/superwechat/res/layout/em_contacts_header.xml&#10;ND&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/superwechat/src/cn/ucai/superwechat/ui/NewFriendsMsgActivity.java&#10;NF&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/superwechat/src/cn/ucai/superwechat/adapter/NewFriendsMsgAdapter.java&#10;mf&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/superwechat/src/cn/ucai/superwechat/utils/MFGT.java&#10;FirentProfileActivity.java&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/superwechat/src/cn/ucai/superwechat/ui/FirentProfileActivity.java&#10;em_row_invite_msg.xml&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/superwechat/res/layout/em_row_invite_msg.xml" />
+    <property name="SearchEverywhereHistoryKey" value="EaseConversationAdapter&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/easeui/src/com/hyphenate/easeui/adapter/EaseConversationAdapter.java&#10;inviteMe&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/superwechat/src/cn/ucai/superwechat/domain/InviteMessage.java&#10;super&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/superwechat/src/cn/ucai/superwechat/SuperWeChatHelper.java&#10;netdao&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/superwechat/src/cn/ucai/superwechat/net/NetDao.java&#10;I&#9;PSI&#9;JAVA://cn.ucai.superwechat.I&#10;userpro&#9;PSI&#9;JAVA://cn.ucai.superwechat.ui.UserProfileActivity&#10;newGroup&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/superwechat/src/cn/ucai/superwechat/ui/NewGroupActivity.java&#10;net&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/superwechat/src/cn/ucai/superwechat/net/NetDao.java&#10;em_activity_new_g&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/superwechat/res/layout/em_activity_new_group.xml&#10;newgroupA&#9;PSI&#9;JAVA://cn.ucai.superwechat.ui.NewGroupActivity&#10;contact&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/superwechat/src/cn/ucai/superwechat/ui/ContactListFragment.java&#10;easeconver&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/easeui/src/com/hyphenate/easeui/adapter/EaseConversationAdapter.java&#10;chatf&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/superwechat/src/cn/ucai/superwechat/ui/ChatFragment.java&#10;user&#9;PSI&#9;JAVA://com.hyphenate.easeui.domain.User&#10;easeuser&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/easeui/src/com/hyphenate/easeui/utils/EaseUserUtils.java&#10;easechatr&#9;PSI&#9;JAVA://com.hyphenate.easeui.widget.chatrow.EaseChatRow&#10;easeChat&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/easeui/src/com/hyphenate/easeui/ui/EaseChatFragment.java&#10;firentpr&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/superwechat/src/cn/ucai/superwechat/ui/FirentProfileActivity.java&#10;firentP&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/superwechat/src/cn/ucai/superwechat/ui/FirentProfileActivity.java&#10;easeConver&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/easeui/src/com/hyphenate/easeui/adapter/EaseConversationAdapter.java&#10;main&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/superwechat/src/cn/ucai/superwechat/ui/MainActivity.java&#10;netd&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/superwechat/src/cn/ucai/superwechat/net/NetDao.java&#10;conversation&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/superwechat/src/cn/ucai/superwechat/ui/ConversationListFragment.java&#10;add_to_blacklist&#9;PSI&#9;JAVA://cn.ucai.superwechat.R.id#add_to_blacklist&#10;contactLis&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/superwechat/src/cn/ucai/superwechat/ui/ContactListFragment.java&#10;superwechat&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/superwechat/src/cn/ucai/superwechat/SuperWeChatHelper.java&#10;Net&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/superwechat/src/cn/ucai/superwechat/net/NetDao.java&#10;login&#9;PSI&#9;JAVA://cn.ucai.superwechat.ui.LoginActivity&#10;conversationList&#9;PSI&#9;JAVA://cn.ucai.superwechat.ui.ConversationListFragment&#10;mfgt&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/superwechat/src/cn/ucai/superwechat/utils/MFGT.java&#10;easechatf&#9;PSI&#9;JAVA://com.hyphenate.easeui.ui.EaseChatFragment&#10;chatAc&#9;PSI&#9;JAVA://cn.ucai.superwechat.ui.ChatActivity&#10;ease_widget_ti&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/easeui/res/layout/ease_widget_title_bar.xml&#10;em_activity_cha&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/superwechat/res/layout/em_activity_chat.xml&#10;easeconta&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/easeui/src/com/hyphenate/easeui/adapter/EaseContactAdapter.java&#10;ease&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/easeui/src/com/hyphenate/easeui/ui/EaseContactListFragment.java&#10;contactlis&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/superwechat/src/cn/ucai/superwechat/ui/ContactListFragment.java&#10;cont&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/easeui/src/com/hyphenate/easeui/ui/EaseContactListFragment.java&#10;pickusera&#9;PSI&#9;JAVA://cn.ucai.superwechat.ui.PickAtUserActivity&#10;grouppick&#9;PSI&#9;JAVA://cn.ucai.superwechat.ui.GroupPickContactsActivity&#10;fo&#9;PSI&#9;JAVA://cn.ucai.superwechat.ui.ForwardMessageActivity&#10;pickcontact&#9;PSI&#9;JAVA://cn.ucai.superwechat.ui.PickContactNoCheckboxActivity&#10;contactlistf&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/superwechat/src/cn/ucai/superwechat/ui/ContactListFragment.java&#10;easecontactlis&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/easeui/src/com/hyphenate/easeui/ui/EaseContactListFragment.java&#10;Easecon&#9;PSI&#9;JAVA://com.hyphenate.easeui.widget.EaseContactList&#10;em_con&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/superwechat/res/layout/em_contacts_header.xml&#10;ND&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/superwechat/src/cn/ucai/superwechat/ui/NewFriendsMsgActivity.java&#10;NF&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/superwechat/src/cn/ucai/superwechat/adapter/NewFriendsMsgAdapter.java&#10;mf&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/superwechat/src/cn/ucai/superwechat/utils/MFGT.java&#10;FirentProfileActivity.java&#9;FILE&#9;file://D:/Android projects2/201610/superwechat/superwechat/src/cn/ucai/superwechat/ui/FirentProfileActivity.java" />
     <property name="android.project.structure.last.selected" value="EaseUI" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="UI_DESIGNER_EDITOR_MODE.NlPaletteManager-NlPreviewForm.SHOW" value="false" />
@@ -3082,7 +3174,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="88" y="55" width="1182" height="721" extended-state="0" />
+    <frame x="116" y="16" width="1182" height="721" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -3097,7 +3189,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.72646534" sideWeight="0.49624062" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6181818" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6441281" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.64298403" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
@@ -3472,13 +3564,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../easeui/src/com/hyphenate/easeui/adapter/EaseConversationAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="249" column="10" selection-start-line="249" selection-start-column="10" selection-end-line="249" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/../easeui/libs/hyphenatechat_3.2.3.jar!/com/hyphenate/chat/EMGroup.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="27">
@@ -3540,8 +3625,68 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cn/ucai/superwechat/SuperWeChatHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+        <state relative-caret-position="17">
+          <caret line="1449" column="30" selection-start-line="1449" selection-start-column="30" selection-end-line="1449" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#10188#10189#0" expanded="true" />
+            <element signature="e#10248#10249#0" expanded="true" />
+            <element signature="e#10325#10326#0" expanded="true" />
+            <element signature="e#10388#10389#0" expanded="true" />
+            <element signature="e#10557#10558#0" expanded="true" />
+            <element signature="e#10628#10629#0" expanded="true" />
+            <element signature="e#12747#12748#0" expanded="true" />
+            <element signature="e#12790#12791#0" expanded="true" />
+            <element signature="e#13920#13967#0" expanded="true" />
+            <element signature="e#14205#14252#0" expanded="true" />
+            <element signature="e#24081#24149#0" expanded="true" />
+            <element signature="e#25242#25304#0" expanded="true" />
+            <element signature="e#26455#26473#0" expanded="true" />
+            <element signature="e#32257#32258#0" expanded="true" />
+            <element signature="e#32329#32330#0" expanded="true" />
+            <element signature="e#37086#37087#0" expanded="true" />
+            <element signature="e#37150#37151#0" expanded="true" />
+            <element signature="e#38429#38430#0" expanded="true" />
+            <element signature="e#38472#38473#0" expanded="true" />
+            <element signature="e#38513#38514#0" expanded="true" />
+            <element signature="e#38564#38565#0" expanded="true" />
+            <element signature="e#40003#40004#0" expanded="true" />
+            <element signature="e#40045#40046#0" expanded="true" />
+            <element signature="e#40561#40571#0" expanded="true" />
+            <element signature="e#42904#44279#0" expanded="true" />
+            <element signature="e#44278#44279#0" expanded="true" />
+            <element signature="e#45474#45488#0" expanded="true" />
+            <element signature="e#46619#49495#0" expanded="true" />
+            <element signature="e#47296#47314#0" expanded="true" />
+            <element signature="e#47909#47919#0" expanded="true" />
+            <element signature="e#49494#49495#0" expanded="true" />
+            <element signature="e#49923#51293#0" expanded="true" />
+            <element signature="e#51292#51293#0" expanded="true" />
+            <element signature="e#51549#51550#0" expanded="true" />
+            <element signature="e#51597#51598#0" expanded="true" />
+            <element signature="e#51649#51650#0" expanded="true" />
+            <element signature="e#51699#51700#0" expanded="true" />
+            <element signature="e#51752#51753#0" expanded="true" />
+            <element signature="e#51803#51804#0" expanded="true" />
+            <element signature="e#51852#51853#0" expanded="true" />
+            <element signature="e#51899#51900#0" expanded="true" />
+            <element signature="e#51950#51951#0" expanded="true" />
+            <element signature="e#51999#52000#0" expanded="true" />
+            <element signature="e#52051#52052#0" expanded="true" />
+            <element signature="e#52101#52102#0" expanded="true" />
+            <element signature="e#52826#52827#0" expanded="true" />
+            <element signature="e#52871#52872#0" expanded="true" />
+            <element signature="e#52921#52922#0" expanded="true" />
+            <element signature="e#52965#52966#0" expanded="true" />
+            <element signature="e#54291#54297#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../easeui/src/com/hyphenate/easeui/adapter/EaseConversationAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5400">
+          <caret line="249" column="10" selection-start-line="249" selection-start-column="10" selection-end-line="249" selection-end-column="10" />
           <folding />
         </state>
       </provider>
