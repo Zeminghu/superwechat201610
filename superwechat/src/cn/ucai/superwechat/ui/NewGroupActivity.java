@@ -171,7 +171,7 @@ public class NewGroupActivity extends BaseActivity {
                     }
                     EMGroup group = EMClient.getInstance().groupManager().createGroup(groupName, desc, members, reason, option);
                     String hxid = group.getGroupId();
-                    createAppGroup(group);
+                    createAppGroup(group,members);
 
                 } catch (final HyphenateException e) {
                     runOnUiThread(new Runnable() {
@@ -186,7 +186,7 @@ public class NewGroupActivity extends BaseActivity {
         }).start();
     }
 
-    private void createAppGroup(final EMGroup group) {
+    private void createAppGroup(final EMGroup group,final String[] members) {
         NetDao.createGroup(this, group, file, new OnCompleteListener<String>() {
             @Override
             public void onSuccess(String s) {
@@ -194,8 +194,8 @@ public class NewGroupActivity extends BaseActivity {
                     Result result = ResultUtils.getResultFromJson(s, Group.class);
                     if (result != null) {
                         if (result.isRetMsg()) {
-                            if (group.getMemberCount() > 1) {
-                                addGroupMembers(group);
+                            if (members!=null && members.length>0) {
+                                addGroupMembers(group.getGroupId(),members);
                             } else {
                                 createGroupSuccess();
                             }
@@ -221,8 +221,8 @@ public class NewGroupActivity extends BaseActivity {
         });
     }
 
-    private void addGroupMembers(EMGroup group) {
-        NetDao.addGroupMember(this, getGroupMemebers(group.getMembers()), group.getGroupId(),
+    private void addGroupMembers(String hxid,String [] members) {
+        NetDao.addGroupMember(this, getGroupMemebers(members), hxid,
                 new OnCompleteListener<String>() {
                     @Override
                     public void onSuccess(String s) {
@@ -249,14 +249,14 @@ public class NewGroupActivity extends BaseActivity {
                 });
     }
 
-    private String getGroupMemebers(List<String> members) {
+    private String getGroupMemebers(String [] members) {
         String membersStr="";
-        members.remove(EMClient.getInstance().getCurrentUser());
-             if (members.size()>0){
+             if (members.length>0){
                  for (String s:members){
                      membersStr+=s+",";
                  }
              }
+        L.e(TAG,"getGroupMemebers,s="+membersStr);
         return membersStr;
     }
 
