@@ -220,6 +220,18 @@ public class GroupDetailsActivity extends BaseActivity implements OnClickListene
                     if (!TextUtils.isEmpty(returnData)) {
                         progressDialog.setMessage(st5);
                         progressDialog.show();
+                        NetDao.updateGroupName(GroupDetailsActivity.this, groupId, returnData,
+                                new OnCompleteListener<String>() {
+                                    @Override
+                                    public void onSuccess(String s) {
+                                        L.e(TAG, "REQUEST_CODE_EDIT_GROUPNAME,s=" + s);
+                                    }
+
+                                    @Override
+                                    public void onError(String error) {
+
+                                    }
+                                });
 
                         new Thread(new Runnable() {
                             public void run() {
@@ -395,14 +407,14 @@ public class GroupDetailsActivity extends BaseActivity implements OnClickListene
         }).start();
     }
 
-    private String getGroupMemebers(String [] members) {
-        String membersStr="";
-        if (members.length>0){
-            for (String s:members){
-                membersStr+=s+",";
+    private String getGroupMemebers(String[] members) {
+        String membersStr = "";
+        if (members.length > 0) {
+            for (String s : members) {
+                membersStr += s + ",";
             }
         }
-        L.e(TAG,"getGroupMemebers,s="+membersStr);
+        L.e(TAG, "getGroupMemebers,s=" + membersStr);
         return membersStr;
     }
 
