@@ -122,6 +122,7 @@ public class EaseUserUtils {
 //                textView.setText();
 //            }
             User user = getAppUserInfo(username);
+            Log.e(TAG,"user="+user);
             if (user != null && user.getMUserNick() != null) {
                 textView.setText(user.getMUserNick());
             } else {
