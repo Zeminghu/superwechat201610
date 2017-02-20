@@ -325,15 +325,14 @@ public class GroupDetailsActivity extends BaseActivity implements OnClickListene
 
     /**
      * 退出群组
-     *
      */
     private void exitGrop() {
         String st1 = getResources().getString(R.string.Exit_the_group_chat_failure);
-        NetDao.removeGroupMember(this , groupId, EMClient.getInstance().getCurrentUser(),
+        NetDao.removeGroupMember(this, groupId, EMClient.getInstance().getCurrentUser(),
                 new OnCompleteListener<String>() {
                     @Override
                     public void onSuccess(String s) {
-                        L.e(TAG, "exitGrop,s="+s);
+                        L.e(TAG, "exitGrop,s=" + s);
                     }
 
                     @Override
@@ -368,7 +367,6 @@ public class GroupDetailsActivity extends BaseActivity implements OnClickListene
 
     /**
      * 解散群组
-     *
      */
     private void deleteGrop() {
         final String st5 = getResources().getString(R.string.Dissolve_group_chat_tofail);
@@ -397,6 +395,17 @@ public class GroupDetailsActivity extends BaseActivity implements OnClickListene
         }).start();
     }
 
+    private String getGroupMemebers(String [] members) {
+        String membersStr="";
+        if (members.length>0){
+            for (String s:members){
+                membersStr+=s+",";
+            }
+        }
+        L.e(TAG,"getGroupMemebers,s="+membersStr);
+        return membersStr;
+    }
+
     /**
      * 增加群成员
      *
@@ -423,6 +432,18 @@ public class GroupDetailsActivity extends BaseActivity implements OnClickListene
                             progressDialog.dismiss();
                         }
                     });
+                    NetDao.addGroupMembers(GroupDetailsActivity.this, getGroupMemebers(newmembers), groupId,
+                            new OnCompleteListener<String>() {
+                                @Override
+                                public void onSuccess(String s) {
+                                    L.e(TAG, "addMembersToGroup,s=" + s);
+                                }
+
+                                @Override
+                                public void onError(String error) {
+
+                                }
+                            });
                 } catch (final Exception e) {
                     runOnUiThread(new Runnable() {
                         public void run() {
@@ -600,7 +621,6 @@ public class GroupDetailsActivity extends BaseActivity implements OnClickListene
      * 群组成员gridadapter
      *
      * @author admin_new
-     *
      */
     private class GridAdapter extends ArrayAdapter<String> {
 
@@ -740,7 +760,7 @@ public class GroupDetailsActivity extends BaseActivity implements OnClickListene
                                 new OnCompleteListener<String>() {
                                     @Override
                                     public void onSuccess(String s) {
-                                        L.e(TAG, "deleteMembersFromGroup,s="+s);
+                                        L.e(TAG, "deleteMembersFromGroup,s=" + s);
                                     }
 
                                     @Override

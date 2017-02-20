@@ -126,7 +126,7 @@ public class NetDao {
                 .execute(listener);
     }
 
-    public static void addGroupMember(Context context, String members, String hxid,
+    public static void addGroupMembers(Context context, String members, String hxid,
                                       OnCompleteListener<String> listener){
 OkHttpUtils<String> utils=new OkHttpUtils<>(context);
         utils.setRequestUrl(I.REQUEST_ADD_GROUP_MEMBERS)

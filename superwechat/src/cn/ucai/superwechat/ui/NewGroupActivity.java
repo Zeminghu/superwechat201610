@@ -222,7 +222,7 @@ public class NewGroupActivity extends BaseActivity {
     }
 
     private void addGroupMembers(String hxid,String [] members) {
-        NetDao.addGroupMember(this, getGroupMemebers(members), hxid,
+        NetDao.addGroupMembers(this, getGroupMemebers(members), hxid,
                 new OnCompleteListener<String>() {
                     @Override
                     public void onSuccess(String s) {
