@@ -7,6 +7,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.hyphenate.chat.EMClient;
 import com.hyphenate.easeui.R;
 import com.hyphenate.easeui.controller.EaseUI;
 import com.hyphenate.easeui.controller.EaseUI.EaseUserProfileProvider;
@@ -95,7 +96,6 @@ public class EaseUserUtils {
     }
 
     public static void setAppUserAvatarByPath(Context context, String path, ImageView imageView, String groupId) {
-        Log.e(TAG, "setAppUserAvatarByPath,groupId="+groupId+",path="+path);
         int default_avatar = R.drawable.default_hd_avatar;
         if (groupId != null) {
             default_avatar = R.drawable.ease_group_icon;
@@ -118,6 +118,9 @@ public class EaseUserUtils {
      */
     public static void setAppUserNick(String username, TextView textView) {
         if (textView != null) {
+//            if (username.equals(EMClient.getInstance().getCurrentUser())){
+//                textView.setText();
+//            }
             User user = getAppUserInfo(username);
             if (user != null && user.getMUserNick() != null) {
                 textView.setText(user.getMUserNick());
